@@ -1,0 +1,13 @@
+<h1>Minha Lista de Produtos</h1>
+
+<ul>
+  <li *ngFor="let produto of produtos">
+    {{ produto.nome }} - R$ {{ produto.preco }}
+  </li>
+</ul>
+
+<div *ngIf="produtos.length === 0">
+  Nenhum produto cadastrado.
+</div>
+
+<router-outlet></router-outlet>
